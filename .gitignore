@@ -1,16 +1,5 @@
 node_modules
-db/performance_schema
-db/sys
-db/mysql
-db/auto.cnf
-db/*.pem
-db/*.sock
-db/ib_buffer_pool
-db/ib_logfile0
-db/ib_logfile1
-db/ibdata1
-db/ibtmp1
-db/mysql.sock
+db/
 src/themes/twentynineteen/
 src/themes/twentytwenty/
 src/themes/twentytwentyone/
