@@ -1,5 +1,5 @@
 node_modules
-db
+
 src/themes/twentynineteen/
 src/themes/twentytwenty/
 src/themes/twentytwentyone/
@@ -8,6 +8,7 @@ src/plugins/akismet/
 src/plugins/hello.php
 teste.html
 
+.idea
 *.vscode
 *.DS_Store
 package-lock.json
