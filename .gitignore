@@ -1,0 +1,13 @@
+node_modules
+db
+src/themes/twentynineteen/
+src/themes/twentytwenty/
+src/themes/twentytwentyone/
+src/framework/
+src/plugins/akismet/
+src/plugins/hello.php
+teste.html
+
+*.vscode
+*.DS_Store
+package-lock.json
