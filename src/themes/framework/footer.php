@@ -14,7 +14,7 @@
                          alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
                 </a>
             </div>
-            <div class="col-md-9 d-flex flex-wrap gap-50">
+            <div class="col-md-9 d-flex flex-md-row flex-column gap-50">
             <?php while(have_rows('contatos', 'options')){
                 the_row(); ?>
             <address class=" mb-4 mb-md-0 text-center text-md-left">
