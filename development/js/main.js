@@ -23,8 +23,10 @@ $jq(document).ready(function() {
             }
         ]
     });
-    let altura = $jq('.pilar').height();
-    $jq('.pilar').css("height", altura * 2.5);
+    if($(window).width() > 768) {
+        let altura = $jq('.pilar').height();
+        $jq('.pilar').css("height", altura * 2.5);
+    }
 
     var SPMaskBehavior = function (val) {
             return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -36,6 +38,16 @@ $jq(document).ready(function() {
         };
 
     $jq('.sp_celphones').mask(SPMaskBehavior, spOptions);
+
+    $jq('.openMenu').click(function (){
+        $jq('.menu').removeClass('d-none');
+        $jq('body').addClass('overflow');
+    });
+
+    $jq('ul.close').click(function (){
+        $jq('.menu').addClass('d-none');
+        $jq('body').removeClass('overflow');
+    });
 })
 
 

@@ -7,7 +7,7 @@ get_header();
     <div class="container">
         <div class="row justify-content-between">
             <?php
-            $total = count(get_field('destaque'));
+            wp_is_mobile()? $todos = 1 : $todos = count(get_field('destaque'));
             while (have_rows('destaque')){ the_row(); ?>
             <div class="box d-flex justify-content-center align-items-center flex-column px-3" style="max-width: calc(100% / <?php echo $total ?>)">
                 <figure>
@@ -47,7 +47,7 @@ get_header();
         <div class="line"></div>
         <div class="row justify-content-between h-100">
             <?php
-            $total = count(get_field('pilares'));
+            wp_is_mobile()? $todos = 1 : $todos = count(get_field('pilares'));
             while(have_rows('pilares')){ the_row(); ?>
                 <div class="box text-center" style="width: calc(100% / <?php echo $total; ?>)">
                     <figure>
@@ -70,7 +70,7 @@ get_header();
                 <?php echo get_field('conteudo_pq'); ?>
             </div>
             <figure class="col-md-6 text-center">
-                <img src="<?php echo get_field('imagem_pq')['url']; ?>" alt="<?php echo get_field('imagem_pq')['alt']; ?>"/>
+                <img class="img-fluid" src="<?php echo get_field('imagem_pq')['url']; ?>" alt="<?php echo get_field('imagem_pq')['alt']; ?>"/>
             </figure>
         </div>
     </div>
@@ -83,7 +83,7 @@ get_header();
             <hr class="mb-4">
             <p><?php echo get_field('subtitulo_quando'); ?></p>
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-md-between justify-content-center">
             <?php while (have_rows('pontos')){ the_row(); ?>
                 <div class="box d-flex justify-content-center flex-column text-center">
                     <figure>
@@ -106,7 +106,8 @@ get_header();
     <div class="container">
         <div class="row">
             <?php
-            $total = count(get_field('passo_a_passo'));
+            wp_is_mobile()? $todos = 1 : $todos = count(get_field('passo_a_passo'));
+
             while (have_rows('passo_a_passo')) {
                 the_row();
                 $Post = get_sub_field('post');?>

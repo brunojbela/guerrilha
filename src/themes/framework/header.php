@@ -12,10 +12,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header id="header" class="<?php echo get_field('banner_background')?  'banner' : ''; ?> mb-5" style="--bg: url(<?php echo get_field('banner_background')['url'] ?>)">
+<header id="header" class="<?php echo get_field('banner_background')?  'banner' : ''; ?> mb-md-5" style="--bg: url(<?php echo get_field('banner_background')['url'] ?>)">
     <section class="bg-dark py-2 mb-3 w-100">
         <div class="container">
-            <div class="row justify-content-end align-items-center">
+            <div class="row justify-content-md-end justify-content-between align-items-center px-3 px-md-0">
                 <ul class="social mb-0 pl-0 mr-4 d-flex align-items-center">
                     <?php while (have_rows('redes_sociais', 'options')) {
                         the_row(); ?>
@@ -49,19 +49,30 @@
                              alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
                     <?php } ?>
                 </a>
-                <div class="menu">
+                <div class="menu d-none d-md-block">
+                    <ul class="close">
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <?php
                     wp_nav_menu(
                         array(
                             'theme_location' => 'main-menu',
                             'depth' => 2,
                             'container' => false,
-                            'menu_class' => 'd-flex flex-wrap m-0 p-0',
+                            'menu_class' => 'd-md-flex flex-wrap m-0',
                             'fallback_cb' => 'Odin_Bootstrap_Nav_Walker::fallback',
                             'walker' => new Odin_Bootstrap_Nav_Walker()
                         )
                     );
                     ?>
+                </div>
+                <div class="d-md-none d-block">
+                    <ul class="openMenu">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>

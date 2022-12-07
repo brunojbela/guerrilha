@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center align-items-center w-100">
-    <a href="<?php echo esc_url( home_url( '/?p=23' ) ); ?>" class="btn btn-primary icon-play"><?php _e("FALE COM A GENTE"); ?> </a>
-    <ul class="ml-5 enderecos m-0 p-0 d-flex">
+<div class="d-flex flex-wrap justify-content-center align-items-center w-100">
+    <a href="<?php echo esc_url( home_url( '/?p=23' ) ); ?>" class="btn btn-primary icon-play mb-4 mb-md-0"><?php _e("FALE COM A GENTE"); ?> </a>
+    <ul class="ml-md-5 enderecos m-0 p-0 d-flex">
         <?php while (have_rows('contatos', 'options')){ the_row(); ?>
             <li class="d-flex align-items-end">
                 <figure class="mb-0 mr-2">

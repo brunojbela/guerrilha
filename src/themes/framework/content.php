@@ -9,14 +9,14 @@
         else :
             the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2><hr class="ml-0 mr-auto mb-4">' );
         endif; if(!is_page()): ?>
-        <div class="meta d-flex justify-content-between mb-4">
+        <div class="meta d-flex justify-content-between mb-2 mb-md-4">
             <span><b>Por:</b> <?php echo get_the_author(); ?></span>
             <span><b>Em:</b> <?php $category = get_the_category($post->ID); echo $category[0]->name; ?></span>
             <span><b>Postado em:</b> <?php echo get_the_date('d \\d\\e F, Y', $post->ID); ?></span>
         </div>
         <?php
         endif;
-        echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'.get_the_post_thumbnail($post->ID, 'blog-thumbnail', array('class' => 'mb-4')).'</a>';
+        echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'.get_the_post_thumbnail($post->ID, 'blog-thumbnail', array('class' => 'mb-4 img-fluid')).'</a>';
         ?>
 
     </header><!-- .entry-header -->

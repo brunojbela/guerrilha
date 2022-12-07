@@ -7,9 +7,9 @@
         </div>
         <div class="row">
             <?php
-            $todos = count(get_field('servicos'));
+            wp_is_mobile()? $todos = 1 : $todos = count(get_field('servicos'));
             while (have_rows('servicos')){ the_row(); ?>
-            <div class="servico mx-2 d-flex flex-column pt-3 pb-0" style="width: calc((100% / <?php echo $todos; ?>) - 16px)">
+            <div class="servico mx-2 d-flex flex-column pt-3 pb-0 mb-3 mb-md-0" style="width: calc((100% / <?php echo $todos; ?>) - 16px)">
                 <figure class="mb-2">
                     <img width="60" class="img-fluid mb-3" src="<?php echo get_sub_field('icone')['url']; ?>" alt="<?php echo get_sub_field('icone')['alt']; ?>">
                 </figure>
