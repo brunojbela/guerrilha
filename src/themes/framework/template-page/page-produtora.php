@@ -49,7 +49,7 @@ get_header();
         <div class="row justify-content-between h-100">
             <?php
             $todos = count(get_field('pilares'));
-            wp_is_mobile()? $todos = 1: ``;
+            wp_is_mobile()? $todos = 1: '';
             while(have_rows('pilares')){ the_row(); ?>
                 <div class="box text-center" style="width: calc(100% / <?php echo $total; ?>)">
                     <figure>
