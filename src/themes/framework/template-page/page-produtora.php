@@ -47,7 +47,8 @@ get_header();
         <div class="line"></div>
         <div class="row justify-content-between h-100">
             <?php
-            wp_is_mobile()? $todos = 1 : $todos = count(get_field('pilares'));
+            $todos = count(get_field('pilares'));
+            wp_is_mobile()? $todos = 1;
             while(have_rows('pilares')){ the_row(); ?>
                 <div class="box text-center" style="width: calc(100% / <?php echo $total; ?>)">
                     <figure>
@@ -106,7 +107,8 @@ get_header();
     <div class="container">
         <div class="row">
             <?php
-            wp_is_mobile()? $todos = 1 : $todos = count(get_field('passo_a_passo'));
+            $todos = count(get_field('passo_a_passo'));
+            wp_is_mobile()? $todos = 1;
 
             while (have_rows('passo_a_passo')) {
                 the_row();
