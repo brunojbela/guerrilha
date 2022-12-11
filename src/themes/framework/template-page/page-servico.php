@@ -59,7 +59,7 @@ get_header();
             while (have_rows('passo_a_passo')) {
                 the_row();
                 $Post = get_sub_field('post');?>
-                <div class="box mx-3" style="width: calc((100% / <?php echo $total; ?>) - 32px)">
+                <div class="box mx-3 mb-3 mb-md-0 px-2" style="width: calc((100% / <?php echo $todos; ?>) - 32px)">
                     <figure class="mb-2">
                         <a href="<?php echo get_permalink($Post->ID); ?>">
                             <?php echo get_the_post_thumbnail($Post->ID, 'blog-thumbnail', array('class' => 'img-fluid')); ?>
