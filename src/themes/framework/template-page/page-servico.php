@@ -13,7 +13,7 @@ get_header();
                     <figure>
                         <img src="<?php echo get_sub_field('icone')['url']; ?>" height="90" alt="<?php echo get_sub_field('titulo'); ?>">
                     </figure>
-                    <h2><?php echo get_sub_field('titulo'); ?></h2>
+                    <h2 class="text-center"><?php echo get_sub_field('titulo'); ?></h2>
                     <p class="text-center"><?php echo get_sub_field('conteudo'); ?></p>
                 </div>
             <?php } ?>

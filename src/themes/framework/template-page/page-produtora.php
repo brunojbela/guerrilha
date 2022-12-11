@@ -27,11 +27,11 @@ get_header();
             <div class="slider">
                 <?php
                 $images = get_field('clientes');
-                foreach( $images as $image ): ?>
+                foreach( $images as $image ){ ?>
                     <figure class="mb-0 text-center">
                         <img height="90" class="mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     </figure>
-                <?php endforeach; ?>
+                <?php }; ?>
             </div>
         </div>
     </div>
