@@ -9,7 +9,7 @@ get_header();
             <?php
             wp_is_mobile()? $todos = 1 : $todos = count(get_field('destaque'));
             while (have_rows('destaque')){ the_row(); ?>
-                <div class="box d-flex justify-content-center align-items-center flex-column px-3" style="max-width: calc(100% / <?php echo $total ?>)">
+                <div class="box d-flex justify-content-center align-items-center flex-column px-3" style="max-width: calc(100% / <?php echo $todos ?>)">
                     <figure>
                         <img src="<?php echo get_sub_field('icone')['url']; ?>" height="90" alt="<?php echo get_sub_field('titulo'); ?>">
                     </figure>

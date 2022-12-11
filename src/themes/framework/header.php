@@ -50,7 +50,7 @@
                     <?php } ?>
                 </a>
                 <div class="menu d-none d-md-block">
-                    <ul class="close">
+                    <ul class="close d-md-none">
                         <li></li>
                         <li></li>
                     </ul>
